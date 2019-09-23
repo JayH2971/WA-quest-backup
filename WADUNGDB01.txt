@@ -1,0 +1,44 @@
+Quest: WADUNGDB01
+DisplayName: WADUNGDB01
+-- Message panels
+QRC:
+
+Message:  1010
+<ce>   You see a small band of warriors
+<ce>   nearby, just as they notice you.
+<ce>   
+<ce>   "Hey, that's %pcf, that freak
+<ce>   with the Dark Brotherhood!
+<ce>   Die, you dog!"
+
+Message:  1011
+<ce>   You see a small band of warriors
+<ce>   nearby, just as they notice you.
+<ce>   
+<ce>   "Who're you? %pcf? Never heard of you.
+<ce>   Leave us alone and we'll be out of here."
+
+QBN:
+
+Foe _warr_ is 3 Warrior
+
+Clock _end_ 3:00
+
+--	Quest start-up:
+    start timer _end_
+
+_dbrepute_ task:
+    when repute with The_Dark_Brotherhood is at least 25
+
+_spawn_ task:
+    when _dbrepute_
+    say 1010
+    create foe _warr_ every 0 minutes 1 times with 100% success
+
+_nospawn_ task:
+    when not _dbrepute_
+    say 1011
+    end quest
+
+_end_ task:
+    end quest
