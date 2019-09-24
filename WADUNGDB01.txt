@@ -34,8 +34,8 @@ Message:  1010
 <ce>  
 <ce>  "You're not with the Dark Brotherhood, are you?"
 <ce>  
-<ce>  Finding no evidence against you, the
-<ce>  killer moves on.
+<ce>  Finding no evidence against you,
+<ce>  the killer moves on.
 
 Message:  1011
 <ce>   You see a small band of warriors
@@ -123,10 +123,19 @@ Foe _sorc_ is Sorceror
 Foe _imp_ is Imp
 Foe _ass_ is Assassin
 
+Person _tg_ faction The_Thieves_Guild
+Person _fg_ faction The_Fighters_Guild
+Person _mg_ faction The_Mages_Guild
+Person _db_ faction The_Dark_Brotherhood
+
 Clock _end_ 3:00
 
 --	Quest start-up:
     start timer _end_
+    repute with _db_ exceeds 25 do _dbrepute_
+    repute with _fg_ exceeds 25 do _fgrepute_
+    repute with _mg_ exceeds 25 do _mgrepute_
+    repute with _tg_ exceeds 25 do _tgrepute_
     pick one of _db_ _fg_ _mg_ _tg_
 
 --Variable picking--
@@ -138,17 +147,10 @@ variable _tg_
 
 --Faction Definitions--
 
-_dbrepute_ task:
-    when repute with The_Dark_Brotherhood is at least 25
-
-_fgrepute_ task:
-    when repute with The_Fighters_Guild is at least 25
-
-_mgrepute_ task:
-    when repute with The_Mages_Guild is at least 25
-
-_tgrepute_ task:
-    when repute with The_Thieves_Guild is at least 25
+variable _dbrepute_
+variable _fgrepute_
+variable _mgrepute_
+variable _tgrepute_
 
 --Event triggers--
 
