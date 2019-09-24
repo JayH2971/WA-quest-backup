@@ -1,5 +1,5 @@
-Quest: WADUNGDB01
-DisplayName: WADUNGDB01
+Quest: WADUNG01
+DisplayName: WADUNG01
 -- Message panels
 QRC:
 
