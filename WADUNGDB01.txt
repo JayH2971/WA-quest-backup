@@ -76,16 +76,52 @@ Message:  1012
 <ce>   A knight approaches and,
 <ce>   recognizing you, draws a weapon.
 <ce>
-<ce>   "
+<ce>   "I know you. Friend of the Dark
+<ce>   Brotherhood, you will die."
+
+Message:  1013
+<ce>   A sorceror and an imp familiar
+<ce>   come into view.
+<ce>   
+<ce>   "Your infamy precedes you.
+<ce>   Die for your alliance to
+<ce>   the Dark Brotherhood."
+<--->
+<ce>   A sorceror and an imp familiar
+<ce>   come into view.
+<ce>   
+<ce>   "The Dark Brotherhood's stench is
+<ce>   upon you. Die, criminal."
+
+Message:  1014
+<ce>   Somehow, an assassin has sneaked
+<ce>   close enough to speak to you.
+<ce>  
+<ce>   "I've come to cleanse this place
+<ce>   of the Dark Brotherhood.
+<ce>   My work will not be in vain."
+<--->
+<ce>   Somehow, an assassin has sneaked
+<ce>   close enough to speak to you.
+<ce>  
+<ce>   "The Dark Brotherhood slew my
+<ce>   daughter. Were you the one?"
+<--->
+<ce>   Somehow, an assassin has sneaked
+<ce>   close enough to speak to you.
+<ce>  
+<ce>   "The Dark Brotherhood has taken
+<ce>   everything from me. You must
+<ce>   suffer for their evils!"
 
 QBN:
 Person _dummy_ group Local_3.0
 
 Foe _warr_ is 3 Warrior
+Foe _kni_ is Knight
 Foe _sorc_ is Sorceror
 Foe _imp_ is Imp
 Foe _ass_ is Assassin
-Foe _kni_ is Knight
 
 Clock _end_ 3:00
 
@@ -128,6 +164,19 @@ _dbevent_ task:
 _dbspawn1_ task:
     say 1011
     create foe _warr_ every 0 minutes 1 times with 100% success
+
+_dbspawn2_ task:
+    say 1012
+    create foe _kni_ every 0 minutes 1 times with 100% success 
+
+_dbspawn3_ task:
+    say 1013
+    create foe _sorc_ every 0 minutes 1 times with 100% success 
+    create foe _imp_ every 0 minutes 1 times with 100% success
+
+_dbspawn4_ task:
+    say 1014
+    create foe _kni_ every 0 minutes 1 times with 100% success
 
 _fgnonevent_ task:
     when _fg_ and not _fgrepute_
