@@ -28,7 +28,7 @@ Message:  1010
 <ce>   Another traveler wants your attention.
 <--->
 <ce>  "Excuse me! Are you interested in making
-<ce>   a bit of gold for traveling?"
+<ce>   a bit of gold for traveling to ___temple_?"
 <ce>   
 <ce>   Another traveler wants your attention.
 <--->
@@ -121,6 +121,7 @@ _deliver_ task:
 _notify_ task:
     when _accept_ and _timer_
     say 1016
+    take _relig_ from pc
 
 _timer_ task:
     end quest
