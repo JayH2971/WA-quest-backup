@@ -1,5 +1,6 @@
 Quest: healtraveler
 DisplayName: Healing a Traveler
+-- Wilderness event
 -- Message panels
 QRC:
 

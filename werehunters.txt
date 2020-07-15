@@ -1,5 +1,6 @@
 Quest: werehunters
 DisplayName: Werewolf Hunters
+-- Dungeon event
 -- Quest should fire only when player is lycanthrope
 -- Message panels
 QRC:

@@ -1,5 +1,6 @@
 Quest: vamphunters
 DisplayName: Vampire Hunters
+-- Dungeon event
 -- Quest should fire only when player is vampire
 -- Message panels
 QRC:
