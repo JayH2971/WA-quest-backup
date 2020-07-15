@@ -17,9 +17,7 @@ QuestFail:  [1003]
 <ce>         arkaymiss 1003 Called
 
 QuestComplete:  [1004]
-<ce>            "Thank you. I'll be safe from here."
-<ce>   
-<ce>   _name_ gives you the payment as promised.
+<ce>         arkaymiss 1004 Called
 
 Message:  1010
 <ce>         You barely notice a priest nearby,
