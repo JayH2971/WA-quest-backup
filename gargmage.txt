@@ -26,7 +26,7 @@ Message:  1010
 <ce>  passing by, complications arise.
 <ce>  
 <ce>  "No! Stupid construct!
-<ce>  Kill the %ra, not me!"
+<ce>  Fight the %ra, not me!"
 
 QBN:
 
