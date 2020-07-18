@@ -1,6 +1,6 @@
 Quest: giantWA
 DisplayName: Giant Encounter
--- Wilderness event
+-- Wilderness event, mountains
 -- Message panels
 QRC:
 

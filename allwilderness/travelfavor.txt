@@ -1,6 +1,6 @@
 Quest: travelfavor
 DisplayName: A Favor for a Traveler
--- Wilderness event
+-- Wilderness event, any region
 -- Message panels
 QRC:
 

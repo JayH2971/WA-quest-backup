@@ -1,6 +1,6 @@
 Quest: arkaymiss
 DisplayName: Missionary of Arkay
--- Wilderness event
+-- Wilderness event, any region
 -- Message panels
 QRC:
 

@@ -1,6 +1,6 @@
 Quest: gargmage
 DisplayName: A Gargoyle and its Mage
--- Wilderness event
+-- Wilderness event, any region
 -- Message panels
 QRC:
 
