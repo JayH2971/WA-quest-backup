@@ -1,6 +1,6 @@
 Quest: harpyWA
 DisplayName: Harpy Encounter
--- Wilderness event, forest
+-- Wilderness event, woodlands
 -- Message panels
 QRC:
 
