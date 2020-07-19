@@ -107,10 +107,10 @@ _deliver_ task:
     end quest
 
 _notify_ task:
-    when _accept_ and _timer_
+    when _accept_ and _2temple_
     say 1014
     create foe _dead_ every 0 minutes 1 times with 100% success
 
-_timer_ task:
+_2temple_ task:
     make _magic_ permanent
     end quest
