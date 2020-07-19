@@ -45,13 +45,13 @@ Clock _failsafe_ 0:05
     pick one of _go1_ _go2_ _go3_
 
 _check1_ task:
-	when attribute Endurance is at least 50
+	when attribute Endurance is at least 30
 
 _check2_ task:
-	when attribute Endurance is at least 60
+	when attribute Endurance is at least 40
 
 _check3_ task:
-	when attribute Endurance is at least 70
+	when attribute Endurance is at least 50
 
 variable _go1_
 variable _go2_
