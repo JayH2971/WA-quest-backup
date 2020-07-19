@@ -44,7 +44,7 @@ Message:  1013
 <ce>  gingerly and continue on your way.
 
 Message:  1014
-<ce>  You step away. Perhaps it hasn't been touched for a reason.
+<ce>  You step away. Perhaps no one has taken it for a reason.
 
 QBN:
 Clock _failsafe_ 0:05
