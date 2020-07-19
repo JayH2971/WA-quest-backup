@@ -1,6 +1,6 @@
 Quest: arkaymiss
 DisplayName: Missionary of Arkay
--- Wilderness event, any region
+-- Wilderness event in Dragontail Mountains, Ilessan Hills, Sentinel, and Shalgora
 -- Message panels
 QRC:
 
