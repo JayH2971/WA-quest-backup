@@ -45,13 +45,13 @@ Clock _failsafe_ 0:05
     pick one of _go1_ _go2_ _go3_
 
 _check1_ task:
-	when attribute Endurance is at least 30
+	when attribute Endurance is at least 25
 
 _check2_ task:
-	when attribute Endurance is at least 40
+	when attribute Endurance is at least 30
 
 _check3_ task:
-	when attribute Endurance is at least 50
+	when attribute Endurance is at least 35
 
 variable _go1_
 variable _go2_
@@ -87,12 +87,6 @@ _success_ task:
 
 _fail_ task:
     say 1010
-    pay 2000 money do _failsafe_ otherwise do _v1000_
-    
-_v1000_ task:
-    pay 1000 money do _failsafe_ otherwise do _v500_
-
-_v500_ task:
     pay 500 money do _failsafe_ otherwise do _v300_
 
 _v300_ task:
