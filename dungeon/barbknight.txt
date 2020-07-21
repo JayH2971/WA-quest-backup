@@ -1,6 +1,6 @@
 Quest: barbknight
 DisplayName: Barbarian x Knight
--- Wilderness event, dungeon
+-- Dungeon event
 -- Message panels
 QRC:
 
