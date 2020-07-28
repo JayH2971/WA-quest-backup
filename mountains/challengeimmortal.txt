@@ -82,4 +82,5 @@ _victory_ task:
     end quest
 
 _failsafe_ task:
+    remove foe _gt1_
     end quest
