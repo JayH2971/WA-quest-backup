@@ -1,0 +1,221 @@
+Quest: WAQ_CITIES_QUEST_NIGHT
+DisplayName: Warm Ashes Cities Human (Night)
+
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:  [1001]
+<ce>           
+
+AcceptQuest:  [1002]
+<ce>           
+
+QuestFail:  [1003]
+<ce>                     
+
+QuestComplete:  [1004]
+<ce>      
+
+Message: 2000
+<ce> As you walk into the city, a group of 
+<ce> outlaws follow behind you. It's 
+<ce> almost as if they were following you...
+<ce> Or... perhaps not...
+<ce>
+<ce> Proceed with caution?
+<--->
+<ce> A strange presence overwhelms you. Almost as if
+<ce> you are being watched...
+<ce>
+<ce> Proceed with caution?
+<--->
+<ce> At this time of night, the city is as empty as 
+<ce> Oblivion itself. Even the City Guard seems
+<ce> to have vanished.
+<ce>  
+<ce> Proceed with caution?
+<--->
+<ce> Foul beasts of the night are believed to 
+<ce> hunt in the wilderness or in small villages.
+<ce> However, a true adventurer knows that they 
+<ce> every so often breach the city walls. 
+<ce>  
+<ce> Proceed with caution?
+<--->
+<ce> From the darkest alley of the city,
+<ce> eyes are seen shimmering fearlessly 
+<ce> through the cold night mist...
+<ce>  
+<ce> Proceed with caution?
+
+QBN:
+
+Clock _cooldown_ 00:05
+Clock _eventtimecheck_ 00:01
+
+
+---- Quest startup
+
+start timer _eventtimecheck_
+
+
+variable _eventtrue_
+-variable _eventxtrigger_
+variable _eventtimepass_
+variable _random1_
+variable _random2_
+-variable _random3_
+-variable _random4_
+-variable _random5_
+-variable _tgsafe_
+-variable _streetwisefail_
+variable _chancepass_
+variable _chancefail_
+-variable _chancepass2_
+-variable _chancefail2_
+-variable _chancefail3_
+variable _chancepass3_
+variable _eventgood_
+variable _eventbad_
+variable _stealthtry_
+
+_cooldown_ task:
+	end quest 
+	--WAQ_WILDERNESS_HUMAN
+
+----------**Check Skills Ability**---
+	
+_luck_ task:
+	when attribute Luck is at least 60
+	
+_stealth_ task:
+	when skill Stealth is at least 50
+	
+    -None = -1,
+    -Strength = 0,
+    -Intelligence = 1,
+    -Willpower = 2,
+    -Agility = 3,
+    -Endurance = 4,
+    -Personality = 5,
+    -Speed = 6,
+    -Luck = 7,
+
+----------**EventChance**---
+	
+_eventtimecheck_ task:
+	setvar _eventtimepass_
+	
+	
+_eventcheck_ task:
+	when _eventtimepass_ 
+	pick one of _eventtrue_ _eventfalse_
+	
+_eventfalse_ task:
+	end quest
+
+_entersanywhere_ task:
+	when pc enters anywhere
+	start timer _cooldown_
+	
+---------*Chance Selection**---
+
+-_chancecheck_ task:
+-	pick one of _chancepass_ _chancefail_
+
+_stealthcheck_ task:
+	when _stealthtry_ and _stealth_
+	pick one of _chancepass_ _chancefail_ 
+	
+_stealthcheck2_ task:
+	when _stealthtry_ and not _stealth_
+	pick one of _chancepass_ _chancefail_ _chancefail_ _chancefail_ _chancefail_
+	
+_streetwisecheck_ task:
+	when _random1_ and not _luck_
+	pick one of _chancepass3_ _chancefail_ _chancefail_ _chancefail_ _chancefail_
+	start timer _cooldown_
+
+
+----------**SelectEventCheck**---
+
+_eventoutcome_ task:
+	when _eventtrue_
+	pick one of _eventbad_
+
+_eventselection_ task:
+	when _eventtrue_ and _eventbad_
+	pick one of _random1_ _badluck_ _random1_
+	
+_eventselection2_ task:
+	when _eventtrue_ and _eventgood_
+	pick one of _random2_ 
+		
+
+----------**Bad Outcome Check #1**---
+
+_skillcheck_ task:
+	when _random1_ and _luck_
+	prompt 2000 yes _stealthtry_ no _chancefail_
+	
+_streetwisepass_ task:
+	when _chancepass3_
+	prompt 2000 yes _stealthtry_ no _chancefail_
+
+	
+_skillpass_ task:
+	when _random1_ and _chancepass_
+	start timer _cooldown_	
+	
+_skillchancefail1_ task:
+	when _random1_ and _chancefail_ and not _entersanywhere_
+	pick one of _q1_ _q2_ _q4_ _q5_ _highwayman_ _thief_
+	start timer _cooldown_
+
+_badluck_ task:
+	pick one of _q1_ _q2_ _q4_ _q5_ _highwayman_ _thief_
+	start timer _cooldown_
+	
+
+-----------**Good Outcome Check #2**---
+
+_skillfail2_ task:
+	when _random2_
+	start timer _cooldown_	
+
+
+----------**Outcome Selection**--- 
+
+	
+----------**Outcome Selection**--- 
+
+_highwayman_ task:
+start quest WAQ_CITIES_MUGGER
+
+_thief_ task:
+start quest WAQ_CITIES_THIEF
+
+_q1_ task:
+start quest WAQ_CITIES_NIGHT_QUEST01
+
+_q2_ task:
+start quest WAQ_CITIES_NIGHT_QUEST02
+
+_q4_ task:
+start quest WAQ_CITIES_NIGHT_QUEST04
+
+_q5_ task:
+start quest WAQ_CITIES_NIGHT_QUEST05
+
+
+	
+
+
+
+
+	
+	
+
+	
+	

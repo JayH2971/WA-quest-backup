@@ -1,0 +1,271 @@
+Quest: WAQ_PROS01
+DisplayName: The Prostitutes 
+-- Message panels
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:  [1001]
+<ce>           
+
+AcceptQuest:  [1002]
+<ce>           
+
+QuestFail:  [1003]
+<ce>                     
+
+QuestComplete:  [1004]
+<ce>                   
+
+  
+--------- Bard Dialog
+
+Message: 1011
+<ce> Looking for a good time?
+<--->
+<ce> You want some company, honey?
+<--->
+<ce> Interested in some good, filthy fun?
+
+Message: 1012
+<ce> Time of your life, 200 gold.
+<--->
+<ce> Special price, 200 gold.
+<--->
+<ce> What'd you say to 200 gold?
+
+Message: 1013
+<ce> For you, how about a freebie?
+<--->
+<ce> For old times sake, how about a freebie?
+
+Message: 1014
+<ce> I ain't no charity, honey.
+<--->
+<ce> No money, no fun, sweetie.
+
+Message: 1015
+<ce> %oth! Can't blame me for asking.
+<--->
+<ce> Oh. How embarrassing. Forget I asked.
+<--->
+<ce> I'm sorry. I thought you felt it too.
+<--->
+<ce> Well, maybe later.
+<--->
+<ce> Ah well, I can always dream.
+
+Message: 1016
+<ce> Alright honey, come meet me at _resident_.
+<--->
+<ce> How about at my place? Come meet me at 
+<ce> _resident_, I'll be waiting.
+<--->
+<ce> This place is rather gloomy.
+<ce> Well, how about a change of scenery?
+<ce> Meet me at _resident_. I'll be waiting my love.
+
+Message: 1018
+<ce> Ugh, all you've done is waste my time.
+<--->
+<ce> I told you, 200 gold. Get out, now!
+<--->
+<ce> Pathetic, you really can't afford
+<ce> 200 gold?
+<--->
+<ce> What was your plan? A freebie?
+<ce> You won' get this unless you have gold. 
+
+Message: 1019
+<ce> %pqn is saying all the right things — the 
+<ce> combination of the words and the sensation gives
+<ce> you goose bumps. 
+<--->
+<ce> She helps you wiggle your shirt all the way off. 
+<ce>
+<ce> "There is no one at home to be suspicious of your 
+<ce> wrinkled clothing?"
+<--->
+<ce> "Wow, it's comfortable in here. 
+<ce> Now let’s get you naked."
+<--->
+<ce> %pqn can’t keep their hands off you, squeezing 
+<ce> your backside a few times before leaning 
+<ce> in to kiss you.
+<--->
+<ce> "Ooooh,tell me, don't be shy." 
+
+Message: 1017
+<ce> "You feel so good... this is sooo good,"
+<--->
+<ce> "Oh, yes, that's good, oh wo-o-o-ww."
+<--->
+<ce> "Mmmm, %pcn… ohhhooo, yessss…"
+<--->
+<ce> "Uhh-hhhhuh! Oooohhhh…"
+<--->
+<ce> "Oh, wowww… ohhhh…"
+<--->
+<ce> "Ow!"
+<--->
+<ce> "Ooo, yes." 
+<--->
+<ce> "Whaa? Sorry…" 
+
+Message: 1020
+<ce> The scene is intense, and doesn't show any
+<ce> signs of slowing down.
+<--->
+<ce> Lust fills the air as you both show
+<ce> passionate love.
+<---> 
+<ce> Nothing can stop your bond with her.
+<ce> Her love captivates you as if 
+<ce> she was a succubus. 
+
+Message: 1021
+<ce> "You feel so good... this is sooo good,"
+<--->
+<ce> "Oh, yes, that's good, oh wo-o-o-ww."
+<--->
+<ce> "Mmmm, %pcn… ohhhooo, yessss…"
+<--->
+<ce> "Uhh-hhhhuh! Oooohhhh…"
+<--->
+<ce> "Oh, wowww… ohhhh…"
+<--->
+<ce> "Ow!"
+<--->
+<ce> "Ooo, yes." 
+<--->
+<ce> "Whaa? Sorry…" 
+
+Message: 1022
+<ce> You settle down in her lap and lay your head on her shoulder,
+<ce> breathing into her neck while you feel her heavy breathing 
+<ce> slowly fade. 
+
+Message: 1023
+<ce> "That was great, please come by again 
+<ce> if you are ever in town."
+<--->
+<ce> "You really know how to please a woman. 
+<ce> Please come and see me again."
+<--->
+<ce> "I'd love to see you again..
+<ce> Maybe when you come back?"
+
+Message: 1024
+<ce> "The original offer was 200 gold, but 
+<ce> now I'm changing it to everything you 
+<ce> have on you.
+<--->
+<ce> "You didn't really thing I was 
+<ce> interested in you, now did you?
+<ce> So Sad that your life ends here."
+<--->
+<ce> "It was easy to bring you here.
+<ce> Should be even easier to send you to 
+<ce> Oblivion."
+<--->
+<ce> "I'm not just a prostitute, you see.
+<ce> But I'm also one hell of an assassin!"
+<--->
+<ce> "You've got dirt on you name,
+<ce> and I'm here to take care of you
+<ce> for good!"
+
+-%ra race
+-%pcn players name
+-%pqn quest giver name
+
+QBN:
+Clock _cooldown_ 00:24
+Person _Pros1_ faction The_Prostitutes female
+Person _Pros2_ faction The_Prostitutes female
+Person _Pros3_ faction The_Prostitutes female
+-Person _Bard3_ faction The_Bards
+Place _Tavern1_ local tavern
+Place _resident_ local house2
+-Place _Tavern3_ local tavern
+
+Foe _monster_ is Nightblade
+-- def female gives warning
+
+--	Quest start-up: 
+variable _offer_
+-variable _dud_
+
+
+-------**Rep Check
+
+_checkForRep_ task:
+	-when faction The_Prostitutes repute is at least 50
+	when repute with The_Prostitutes is at least 50
+
+
+--------**Reset
+_exitsCity_ task:
+	when pc exits city
+	start timer _cooldown_
+	
+_cooldown_ task:
+	end quest
+
+-------*Setup Pros
+setvar _PlacePros_
+
+
+_PlacePros_ task:
+	place npc _Pros1_ at _Tavern1_
+	hide npc _Pros2_
+	hide npc _Pros3_
+
+_prompt_ task:
+	clicked npc _Pros1_
+	prompt 1011 yes _offer_ no _promptno_
+
+_prompt2_ task:
+	when _offer_
+	prompt 1012 yes _promtyes_ no _promptno2_
+
+_promptno_ task:
+	say 1015
+
+_promptno2_ task:
+	say 1014
+
+_promtyes_ task:
+	say 1016
+	hide npc _Pros1_
+	pick one of _setup_ _sex_
+
+_sex_ task:
+	place npc _Pros2_ at _resident_
+
+_setup_ task:
+	place npc _Pros3_ at _resident_
+
+_promptsex_ task:
+	clicked _Pros2_ and at least 200 gold otherwise do _nomoney_
+	say 1019
+	say 1017
+	say 1020
+	say 1021
+	say 1022
+	say 1023
+	change repute with _Pros2_ by +5
+end quest
+
+_promptsetup_ task:
+	clicked npc _Pros3_
+	say 1024
+	hide npc _Pros3_
+	create foe _monster_ every 0 minutes 1 times with 100% success
+	-place _monster_ at _resident_
+	-end quest
+
+_nomoney_ task:
+	say 1018
+	change repute with _Pros2_ by -5
+	end quest

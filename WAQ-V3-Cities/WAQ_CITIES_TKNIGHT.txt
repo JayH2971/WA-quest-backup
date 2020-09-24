@@ -1,0 +1,541 @@
+Quest: WAQ_CITIES_TKNIGHT
+DisplayName: Warm Ashes Traveling Knights Cities
+
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:  [1001]
+<ce>           
+
+AcceptQuest:  [1002]
+<ce>           
+
+QuestFail:  [1003]
+<ce>                     
+
+QuestComplete:  [1004]
+<ce> 
+
+
+Message: 2004
+<ce>"Hail, friend! I was just on my way to Wayrest.
+<ce>Didn't mean to startle you. I'll be on my way then.
+<ce>May Lord Akatosh lends you his might.
+<--->
+<ce>A Knight appears from out East and waves you down.
+<ce>
+<ce>"Hey! I'm looking for an outlaw around this area.
+<ce>A cat burglar who's been causing chaos in the nearby
+<ce>villages. His name is ...
+<ce>
+<ce>Not knowing the man in question you shake your head.
+<ce>
+<ce>"Very well, may %god bless you.
+
+Message: 2005
+<ce> "How goes it? If you feel like you are up to the 
+<ce> task, you should join the Fighters Guild. They
+<ce> provided me with plenty of work, and benefits."
+<--->
+<ce> You see a Fighters Guild member looking around.
+<ce> It looks as if they are looking for someone.
+<--->
+<ce> "Got a Giant problem? You should seek out the Fighters 
+<ce> Guild. We specialize in that sort of thing."
+<--->
+<ce> "Get away from me you vermin."
+<ce>
+<ce> A man says as he walks by. They look to be a 
+<ce> Apprentice of the Fighters Guild. 
+
+Message: 2006
+<ce> "What the hell are you doing?!"
+<ce>
+<ce> Attempt robbery?
+<--->
+<ce> "You wouldn't dare...
+<ce>
+<ce> Attempt robbery?
+<--->
+<ce> "You know not what you are doing."
+<ce>
+<ce> Attempt robbery?
+<--->
+<ce> "You better hope you have skill with that weapon..."
+<ce>
+<ce> Attempt robbery?
+<--->
+<ce> "Come on now, there's no need to get violent!"
+<ce>
+<ce> Attempt robbery?
+<--->
+<ce> "I've seen rats more deadlier that you!"
+<ce>
+<ce> Attempt robbery?
+<--->
+<ce> "This will be your last mistake you ever make!"
+<ce>
+<ce> Attempt robbery?
+
+Message: 2007
+<ce> "For the glory of %crn! "
+<--->
+<ce> "You are more of a fool than you look!"
+<--->
+<ce> "You leave me no choice."
+<--->
+<ce> "You call that a threat? I'll show you
+<ce> what a real threat looks like!"
+<--->
+<ce> "Pity. Maybe %ln will reward me
+<ce> greatly for exterminating scum like you."
+<--->
+<ce> "I've fought the best of Tamriel !
+<ce> No way a street thug like you has any chance
+<ce> against the likes of me!"
+<--->
+<ce> "Who sent you? The Thieves Guild? No...
+<ce> I'd never picture a come to life Imp's
+<ce> excrement such as yourself to even have
+<ce> that much honor."
+<--->
+<ce> "HA! You humor me. You want to be killed?
+<ce> So be it!"
+
+Message: 2008
+<ce> "Okay, okay! Have mercy! Take whatever you want!"
+<--->
+<ce> "I-is this what you want? Go ahead! I didn't need it anyways!"
+<--->
+<ce> "You are scum. If i didn't have places to be, I'd spend
+<ce> the extra time to chop you down where you stand..."
+
+Message: 2010
+<ce> "Look who we have here! Why isn't it the %ra I've been looking for?
+<ce> %pcn was it? I've been hired by the Fighter's Guild to find you.
+<ce> What for? It doesn't matter. I see will see this quest through.
+<ce> Come with me, or else..."
+
+Message: 2011
+<ce> "For the glory of %crn!"
+<--->
+<ce> "You are more of a fool than you look!"
+<--->
+<ce> "You leave me no choice."
+<--->
+<ce> "Pity. Maybe %ln will reward me
+<ce> greatly for exterminating scum like you."
+<--->
+<ce> "HA! You humor me. You want to be killed?
+<ce> So be it!"
+
+Message: 2012
+<ce> "My job was to bring you here. The Fighters Guild has an offer 
+<ce> for you. One that would be in your very best interest.
+<ce> A Fighter's Guild representative is inside waiting to speak
+<ce> with you."
+
+Message: 2013
+<ce> "How goes it? You might be confused as to why I 
+<ce> had you brought here. I'll keep it brief. You see,
+<ce> we found information regarding your, well, "Associates".
+<ce> The Fighters Guild were hired to take you in.
+<ce> Be it dead or alive. However, at least for me,
+<ce> I'd rather not spill blood. We don't kill 
+<ce> unless we have to. If we were as cold blooded
+<ce> we'd be no better than the Dark brotherhood.
+<ce> I have a request. Something that might interest you.
+<ce> However, that means changes have to be made.
+<ce> Are you interested?"
+
+Message: 3000
+<ce> "Very well, here's the deal. Cut ties with all
+<ce> the criminals you are associated with. Every last 
+<ce> one. In return, we will restore credibility to you 
+<ce> in this region. From here on out, you are free
+<ce> from those criminal organizations and you can 
+<ce> live an honest life. Help people. Better yourself.
+<ce> I'll let you know now. The underworld will not 
+<ce> be happy about it. It will be a dangerous choice
+<ce> but if I'll have any say in it, the Fighters Guild 
+<ce> will help protect you if we can. It's a difficult
+<ce> choice. Take your time."
+<ce>
+<ce> Cut ties with the underworld?
+
+Message: 3001
+<ce> "I understand. The choice is not an easy one.
+<ce> The dangers of leaving a criminal past is massive.
+<ce> I can't guarantee you that future contracts 
+<ce> to hunt you won't come up but after this conversation
+<ce> I've had with you, I can only feel there is still
+<ce> hope left for you. You came all the way out here, 
+<ce> traversed this monster filled cave, and you still 
+<ce> listened to what I had to say. I expected worse 
+<ce> from someone with so many dirty associations. 
+<ce> I will pray to %god that one day you may
+<ce> very well change your ways."
+
+Message: 3002
+<ce> "Excellent! From here on out, consider yourself clean.
+<ce> Free to do as you please. I will not tell you how to 
+<ce> live your life, but life after abruptly cutting ties
+<ce> with those factions isn't an easy one. You might
+<ce> have to change your identity, go into hiding, and 
+<ce> maybe even live a new life. If not, perhaps you could 
+<ce> join the Fighters Guild? The place is like family to me.
+<ce> I have no doubt they'll accept you too. Whatever you 
+<ce> decide, stay safe on your travels."
+
+Message: 3003
+<ce> Try to pacify the fighters guild agent?
+<ce>
+<ce> (Etiquette)
+
+Message: 3004
+<ce> "Hey! Where do you think you are going?
+<ce> If you won't come willingly, then 
+<ce> we have no other option here! Have at you!"
+
+Message: 3005
+<ce> "You there! I must speak with you. My name is 
+<ce> Sir %ln. I'm a traveling Knight looking 
+<ce> for the greatest warriors of the land. You see
+<ce> I've fought my entire life, and with every 
+<ce> battle I wanted to die a warriors death.
+<ce> Some might see it as a blessing to live another
+<ce> day but, I rather go out in battle than to die of 
+<ce> old age in some cottage. The only thing 
+<ce> I have left is my love for battle. I'll get 
+<ce> straight to the point. I would like to duel you 
+<ce> to the death. You seem to be a capable warrior 
+<ce> yourself. Please, may you give me this chance
+<ce> to die with honor."
+<ce>
+<ce> Fight the knight to the death?
+
+Message: 3006
+<ce> "Thank you! May our battle be legendary!"
+
+Message: 3007
+<ce> Very well. Perhaps I will find another warrior 
+<ce> on my travels. Have a safe journey, friend. 
+
+Message: 3008
+<ce> As you strike him down, the knight takes their final 
+<ce> breath. With a smile, they pass onto the afterlife.
+
+Message: 3009
+<ce> You manged to steal from the warrior.
+
+Message: 3010
+<ce> "Greetings! My name is Sir %ln. I'm a traveling 
+<ce> Knight looking for the greatest warriors of the land. 
+<ce> You see I've fought my entire life, and with every 
+<ce> battle I wanted to die a warriors death.
+<ce> Some might see it as a blessing to live another
+<ce> day but, I rather go out in battle than to die of 
+<ce> old age in some cottage. The only thing 
+<ce> I have left is my love for battle."
+<ce> 
+<ce> He gives you a sharp look up and down.
+<ce>
+<ce> "Hmmm perhaps you are not ready for such a challenge.
+<ce> May we cross paths again when you are prepared."
+
+QBN:
+
+Clock _cooldown_ 00:30
+Clock _eventtimecheck_ 00:01
+Clock _fgeventtime_ 00:00
+
+-Foe _thief_ is Thief
+-Foe _rogue_ is Rogue
+-Foe _acro_ is Acrobat
+-Foe _bard_ is Bard
+
+Foe _warrior_ is Warrior
+-Foe _warriorp_ is Warrior
+Foe _knight_ is Knight
+-Foe _healer_ is Healer
+-Foe _ranger_ is Ranger
+-Foe _barbarian_ is Barbarian
+
+Foe _fgknight_ is Knight
+-Foe _fgknight2_ is Knight
+
+Place _fghaven_ remote dungeon
+
+-Item _robgold_ gold range 5 to 500
+-Item _thiefbag_ large_sack 
+
+Person _fg_ faction The_Fighters_Guild
+Person _tg_ faction The_Thieves_Guild
+Person _db_ faction The_Dark_Brotherhood
+Person _kg_ factionType Knightly_Guard
+Person _td_ factionType Thieves_Den
+Person _GuildRep_ faction The_Fighters_Guild female
+
+---- Quest startup
+
+start timer _eventtimecheck_
+repute with _fg_ exceeds 100 do _fgsafe_
+repute with _tg_ exceeds 30 do _badrep_
+repute with _db_ exceeds 30 do _badrep_
+repute with _td_ exceeds 30 do _badrep_
+create npc _GuildRep_
+place npc _GuildRep_ at _fghaven_
+
+
+
+variable _eventtrue_
+-variable _eventxtrigger_
+variable _eventtimepass_
+-variable _random1_
+-variable _random2_
+variable _random3_
+-variable _random4_
+-variable _random5_
+-variable _streetwisefail_
+-variable _chancepass_
+-variable _chancefail_
+variable _chancepass2_
+variable _chancefail2_
+-variable _eventgood_
+-variable _eventbad_
+variable _fgsafe_
+-variable _tgsafe_
+-variable _dbsafe_
+-variable _kgsafe_
+variable _etiquettetry_ 
+variable _badrep_
+variable _ewarrior_
+variable _fgwarrior_
+variable _agreed_
+variable _duel_
+
+_cooldown_ task:
+	end quest
+
+----------**Check Skills Ability**---
+	
+_streetwise_ task:
+	when skill Streetwise is at least 60
+	
+_strength_ task:
+	when attribute Strength is at least 60
+	
+_etiquette_ task:
+	when skill Etiquette is at least 60
+	
+---------* Sound**---
+_makesound_ task:
+	play sound talking_medium every 0 minutes 10 times
+	clear _makesound_
+	
+
+----------**EventChance**---
+	
+_eventtimecheck_ task:
+	setvar _eventtimepass_
+	
+	
+_eventcheck_ task:
+	when _eventtimepass_ 
+	setvar _eventtrue_
+	
+-_eventfalse_ task:
+-	start timer _cooldown_
+-	end quest	
+	
+-_entersanywhere_ task:
+-	when pc enters anywhere
+-	start timer _cooldown_
+
+_etiquettecheck_ task:
+	when _etiquettetry_ and not _etiquette_
+	pick one of _chancefail2_ _chancepass2_ _chancefail2_ _chancefail2_ _chancefail2_
+	start timer _cooldown_
+	
+_etiquettecheck2_ task:
+	when _etiquettetry_ and _etiquette_
+	pick one of _chancefail2_ _chancepass2_
+	start timer _cooldown_
+
+
+---------*Chance Selection**---
+
+-_chancecheck_ task:
+-	pick one of _chancepass_ _chancefail_
+	
+-_chancecheck2_ task:
+-	pick one of _chancepass2_ _chancefail2_
+	
+	
+----------**SelectEventCheck**---
+
+_eventselection2_ task:
+	when _eventtrue_ 
+	pick one of _ewarrior_ _ewarrior_ _fgwarrior_ _fgwarrior_	
+
+
+-----------**Outcome #3**---
+
+_outcome3warrior_ task:
+	when _eventtrue_ and _ewarrior_ 
+	create foe _warrior_ every 0 minutes 1 times with 100% success
+	restrain foe _warrior_
+	-get item _thiefbag_
+	-make _thiefbag_ permanent
+	-restrain foe _knight_
+	say 2004
+	setvar _makesound_
+	start timer _cooldown_	
+	
+_outcome3fgwarrior_ task:
+	when _eventtrue_ and _fgwarrior_ and not _badrep_
+	create foe _fgknight_ every 0 minutes 1 times with 100% success
+	restrain foe _fgknight_
+	-restrain foe _knight_
+	say 2005
+	start timer _cooldown_
+	
+_outcome3Bad_ task:
+	when _eventtrue_ and _fgwarrior_ and _badrep_
+	prompt 2010 yes _knightyes_ no _outcome3skill_
+	
+_outcome3skill_ task:
+	prompt 3003 yes _etiquettetry_ no _knightno_
+	
+_etiquettepass_ task:
+	when _chancepass2_ and _random3_
+	create foe _fgknight_ every 0 minutes 1 times with 100% success
+	restrain foe _fgknight_
+
+_etiquettefail_ task:
+	when _chancefail2_ and _random3_
+	create foe _fgknight_ every 0 minutes 1 times with 100% success
+	say 2011
+	
+_knightyes_ task:
+	restrain foe _fgknight_
+	teleport pc to _fghaven_ 
+	start timer _fgeventtime_
+	setvar _agreed_
+
+_arrangement_ task:
+    clicked npc _GuildRep_
+	prompt 2013 yes _secondchance_ no _decline_
+	
+_decline_ task:
+	create foe _fgknight_ every 3 minutes 10 times with 100% success
+	say 2011
+	change repute with _fg_ by -10
+	change repute with _kg_ by -15
+	change repute with _db_ by +5
+	change repute with _tg_ by +5
+	change repute with _td_ by +3
+	destroy _GuildRep_
+	
+_secondchance_ task:
+	prompt 3000 yes _cutties_ no _gooddec_
+	
+_gooddec_ task:
+	say 3001
+	change repute with _fg_ by -5
+	change repute with _kg_ by -5
+	change repute with _db_ by +3
+	change repute with _tg_ by +3
+	change repute with _td_ by +5
+	legal repute +100
+	start timer _cooldown_
+	
+_cutties_ task:
+	say 3002
+	change repute with _fg_ by +150
+	change repute with _db_ by -100
+	change repute with _tg_ by -100
+	change repute with _td_ by -100
+	legal repute +100
+	start timer _cooldown_
+
+_knightno_ task:
+	say 2011
+	start timer _cooldown_
+	
+_fgeventtime_ task:
+	create foe _fgknight_ every 0 minutes 1 times with 100% success
+	restrain foe _fgknight_
+	place npc _GuildRep_ at _fghaven_
+	say 2012
+	
+_desertion_ task:
+	when pc exits anywhere
+	when _agreed_
+	-create foe _fgknight_ every 1 minutes 10 times with 100% success
+	start timer _cooldown_
+	say 3004
+
+----------**Robbery**---
+	
+-_rob_ task:
+-	dropped _thiefbag_ at anywhere
+-	prompt 2006 yes _chancecheck_ no _chancefail_
+	
+-_robpass_ task:
+-	when _rob_ and _chancepass_
+-	remove foe _warrior_
+-	say 2008
+-	give pc _robgold_
+-	legal repute -5
+
+	
+-_robfail_ task:
+-	when _rob_ and _chancefail_
+-	legal repute -5
+-	say 2007
+
+
+_fgkilled_ task:
+	killed _fgknight_ 
+ 	change repute with _fg_ by -10
+	change repute with _kg_ by -15
+	
+_fginj_ task:
+	injured _fgknight_
+	say 2011
+	
+	
+_outcome3duel_ task:
+	when _eventtrue_ and _duel_ and _strength_
+	prompt 3005 yes _duelyes_ no _duelno_
+	
+_outcome3duelweak_ task:
+	when _eventtrue_ and _duel_ and not _strength_
+	say 3010 
+	create foe _knight_ every 0 minutes 1 times with 100% success
+	restrain foe _knight_
+	start timer _cooldown_
+	
+_duelyes_ task:
+	say 3006 
+	change repute with _kg_ by +3
+	create foe _knight_ every 0 minutes 1 times with 100% success
+
+	
+-_live_ task:
+-	prompt 3009 yes _duelyes_ no _duelno_
+	
+	
+_duelno_ task:
+	say 3007
+	create foe _knight_ every 0 minutes 1 times with 100% success
+	restrain foe _knight_
+	start timer _cooldown_
+
+_fbreath_ task:
+	killed _knight_ 
+	say 3008
+	start timer _cooldown_
+ 

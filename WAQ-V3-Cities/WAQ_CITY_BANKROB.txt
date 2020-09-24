@@ -1,0 +1,107 @@
+Quest: WAQ_CITY_BANKROB
+DisplayName: Warm Ashes Cities (Bank Robbery)
+
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:  [1001]
+<ce>           
+
+AcceptQuest:  [1002]
+<ce>           
+
+QuestFail:  [1003]
+<ce>                     
+
+QuestComplete:  [1004]
+<ce> "You've earned it!"
+
+Message: 2005
+<ce> "Give me everything you have! I 
+<ce> mean it! If I find out you left
+<ce> a single piece of gold, I'll 
+<ce> return for your head!"
+<ce>
+<ce> A Thief appears to be
+<ce> shaking down the Banker.
+<ce>
+<ce> Should you intervene?
+
+Message: 2006
+<ce> "Damn it! NO witnesses will
+<ce> leave this place alive!
+
+Message: 2007
+<ce> The man quickly rushes past you
+<ce> taking all the money he could get
+<ce> from the banker.
+
+Message: 2008
+<ce> You strike this would be Bank 
+<ce> robber down with a swift strike.
+<ce> The banker runs to you with a great smile
+<ce>
+<ce> "Thank you! Thank you so much! Please,
+<ce> take this as a reward!"
+ 
+
+QBN:
+
+Clock _cooldown_ 00:05
+-Clock _eventxtrigger_ 00:01
+-Clock _eventtimecheck_ 00:01
+
+Foe _monster_ is Nightblade
+-- female gives warning
+
+Person _bank_ group Banker
+Place _Location1_ local bank
+
+Item _reward_ gold
+
+---- Quest startup
+
+-setvar _chance_
+pc at _Location1_ do _prompt_
+
+-variable _chancepass_
+-variable _chancefail_
+-variable _chancepass2_
+-variable _chancefail2_
+-variable _fgsafe_
+-variable _templesafe_
+-variable _tgsafe_
+-variable _random4_
+
+
+--------**Reset
+_exitsCity_ task:
+	when pc exits city
+	start timer _cooldown_
+	
+_cooldown_ task:
+	end quest
+
+----------** Reputation Check**---
+
+_prompt_ task:
+-when Note: this line was not finished
+prompt 2005 yes _fight_ no _promptno_
+
+_promptno_ task:
+say 2007
+end quest
+	
+_fight_ task:
+say 2006
+create foe _monster_ every 0 minutes 1 times with 100% success
+	
+_slain_ task:
+killed 1 _monster_
+change repute with _bank_ by +5
+legal repute +5
+say 2008
+give pc _reward_
+end quest
+	

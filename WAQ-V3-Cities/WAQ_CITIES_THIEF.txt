@@ -1,0 +1,150 @@
+Quest: WAQ_CITIES_THIEF
+DisplayName: Warm Ashes Cities Thief
+
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:  [1001]
+<ce>           
+
+AcceptQuest:  [1002]
+<ce>           
+
+QuestFail:  [1003]
+<ce>                     
+
+QuestComplete:  [1004]
+<ce>                 
+
+Message: 2000
+<ce> With your sharp eye, you notice a theif who's been
+<ce> eyeballing you for a good while. He hasn't caught on 
+<ce> that you've picked up on him. However, he begins
+<ce> moving towards you using civilians as cover.
+<ce>
+<ce> Attempt to avoid encounter?
+<---> 
+<ce> Within the crowds in the city is a theif, and his
+<ce> have been following you for quite awhile. His
+<ce> plan is clear. Either a snatch purse or possibly
+<ce> a mugging.
+<ce>
+<ce> Attempt to avoid encounter?
+
+Message: 2001
+<ce> "Your money or your life"
+<--->
+<ce> "Aye, hand over all your valubles.
+<ce> Don't try to play hero, unless you want
+<ce> a knife through your throat."
+<--->
+<ce> "Don't make any sudden moves.
+<ce> I want you to reach for your coin pouch.
+<ce> and casually hand it to me so the guards
+<ce> don't notice. Do it slowly, or this encounter
+<ce> will be a violent one."
+<--->
+<ce> "I'll be taking that coin pouch off of you.
+<ce> Call for the guards if you want, they won't be able to 
+<ce> help you in by the time i cut you down."
+
+Message: 2002
+<ce> As the thief makes his way to you, you managed
+<ce> to slip within the crowd unnoticed.
+
+QBN:
+
+-Clock _questreset_ 05:00
+Clock _eventxtrigger_ 00:01
+Clock _eventtimecheck_ 00:01
+
+Person _tg_ faction The_Thieves_Guild
+
+-Item _lostgold_ gold
+
+Foe _thief_ is Thief
+
+
+---- Quest startup
+
+repute with _tg_ exceeds 10 do _tgsafe_
+start timer _eventtimecheck_
+
+variable _cooldown_
+variable _eventtrue_
+variable _eventxtrigger_
+variable _eventtimepass_
+variable _chancefail_
+variable _random1_
+-variable _random2_
+-variable _random3_
+-variable _random4_
+-variable _random5_
+variable _tgsafe_
+-variable _streetwisefail_
+
+
+----------**Check Skills Ability**---
+	
+_streetwise_ task:
+	when skill Streetwise is at least 60
+	
+_etiquette_ task:
+	when skill Etiquette is at least 60
+
+
+----------** Language Check**---
+
+_streetwisecheck_ task:
+	when _random1_ and _eventxtrigger_ and _streetwise_
+	prompt 2000 yes _chancecheck_ no _chancefail_
+	
+
+----------**EventChance**---
+	
+_eventcheck_ task:
+	when _eventtimepass_ 
+	pick one of _eventtrue_
+	
+_eventtimecheck_ task:
+	setvar _eventtimepass_
+	
+-_eventfalse_ task:
+-	start timer _questreset_
+-	setvar _cooldown_
+	
+	
+---------*Chance Selection**---
+
+_chancecheck_ task:
+	pick one of _chancepass_ _chancefail_
+
+_chancepass_ task:
+	-start timer _questreset_
+	setvar _cooldown_
+	
+	
+----------**SelectEventCheck**---
+
+_eventselection_ task:
+	when _eventtrue_
+	pick one of _random1_ 
+	-start timer _questreset_
+	start timer _eventxtrigger_
+	setvar _cooldown_
+	
+	
+----------**Outcomes**---
+	
+_outcome1fail_ task:
+	when _random1_ and _eventxtrigger_ and _chancefail_
+	start task _final_
+
+_outcome2fail_ task:
+	when _random1_ and _eventxtrigger_ and not _streetwise_
+	start task _final_
+
+_final_ task:
+	create foe _thief_ every 0 minutes 1 times with 100% success
+	say 2001

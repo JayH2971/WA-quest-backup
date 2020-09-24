@@ -1,0 +1,39 @@
+Quest: WAQ_CITIES_STARTUP
+DisplayName: Warm Ashes Cities (Dummy Startup)
+
+QRC:
+
+QuestorOffer:  [1000]
+
+RefuseQuest:  [1001]
+<ce>           
+
+AcceptQuest:  [1002]
+<ce>           
+
+QuestFail:  [1003]
+<ce>                     
+
+QuestComplete:  [1004]
+<ce>                 
+
+
+QBN:
+
+-Place _dung_ permanent PirateerHold2
+
+
+---- Quest startup
+
+_entersCity_ task:
+	when pc enters city
+	start quest WAQ_CITIES
+	end quest
+
+
+
+
+	
+
+	
+	
